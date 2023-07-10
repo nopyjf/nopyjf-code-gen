@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'modules/selection/ui/SelectionListScreen.dart';
+import 'modules/selection/ui/selection_list_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,12 +13,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'NopyJF Fl',
+      title: 'NopyJF Code Gen',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'NopyJF Code Gen'),
     );
   }
 }
@@ -33,45 +33,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-          title: Text(widget.title),
-        ),
-        body: const SelectionListScreen()
-
-        // Center(
-        //   child: Column(
-        //     mainAxisAlignment: MainAxisAlignment.center,
-        //     children: <Widget>[
-        //       const Text(
-        //         'You have pushed the button this many times:',
-        //       ),
-        //       Text(
-        //         '$_counter',
-        //         style: Theme.of(context).textTheme.headlineMedium,
-        //       ),
-        //     ],
-        //   ),
-        // ),
-        // floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-        // floatingActionButton: FloatingActionButton.extended(
-        //   label: const Text("Add"),
-        //   onPressed: _incrementCounter,
-        //   tooltip: 'Increment',
-        //   icon: const Icon(Icons.add),
-        //   // child: const Icon(Icons.add),
-        // ),
-        );
+    return SelectionListScreen(title: widget.title);
   }
 }
