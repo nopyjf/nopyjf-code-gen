@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'find_text.dart';
 import 'selection_item.dart';
 
 class SelectList extends StatefulWidget {
@@ -16,7 +17,7 @@ class _SelectListState extends State<SelectList> {
       scrollDirection: Axis.vertical,
       itemCount: 10,
       itemBuilder: (BuildContext context, int index) {
-        return SelectionItem(index: index);
+        return const FindText();
       },
     );
   }

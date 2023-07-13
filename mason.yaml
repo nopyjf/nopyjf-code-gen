@@ -1,7 +1,5 @@
 bricks:
   screen:
-    path: bricks/screen
-  todos:
-     git:
-       url: https://github.com/felangel/mason.git
-       path: bricks/todos
+    git:
+      url: https://github.com/nopyjf/nopyjf-code-brick.git
+      path: screen
