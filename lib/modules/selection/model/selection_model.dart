@@ -80,13 +80,13 @@ String transformCmd(Selection state, String feature, String screen) {
 
     // Command Line
     if (widget.widget == 'ElevatedButton') {
-      var cmd = "mason make elevated_button $featureCmd $screenCmd $nameCmd";
+      var cmd = "mason make elevated-button $featureCmd $screenCmd $nameCmd";
       cmdList.add(cmd);
     } else if (widget.widget == 'TextButton') {
-      var cmd = "mason make text_button $featureCmd $screenCmd $nameCmd";
+      var cmd = "mason make text-button $featureCmd $screenCmd $nameCmd";
       cmdList.add(cmd);
     } else if (widget.widget == 'FloatingButton') {
-      var cmd = "mason make floating_button $featureCmd $screenCmd $nameCmd";
+      var cmd = "mason make floating-button $featureCmd $screenCmd $nameCmd";
       cmdList.add(cmd);
     }
   }
