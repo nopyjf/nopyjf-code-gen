@@ -1,23 +1,27 @@
 import 'package:flutter/material.dart';
 
-import 'find_text.dart';
+import '../../bloc/selection_bloc.dart';
+import '../../model/selection_model.dart';
 import 'selection_item.dart';
 
-class SelectList extends StatefulWidget {
-  const SelectList({Key? key}) : super(key: key);
+class SelectList extends StatelessWidget {
+  const SelectList({Key? key, required this.data}) : super(key: key);
 
-  @override
-  State<SelectList> createState() => _SelectListState();
-}
+  final SelectionState data;
 
-class _SelectListState extends State<SelectList> {
   @override
   Widget build(BuildContext context) {
+    List<SelectionWidget> dataSources = data.model.dataSources;
+
+    ElevatedButton(onPressed: () {  }, child: null,);
+
     return ListView.builder(
       scrollDirection: Axis.vertical,
-      itemCount: 10,
+      itemCount: dataSources.length,
       itemBuilder: (BuildContext context, int index) {
-        return const FindText();
+        return SelectionItem(
+          data: dataSources[index],
+        );
       },
     );
   }
