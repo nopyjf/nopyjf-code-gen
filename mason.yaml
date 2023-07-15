@@ -3,3 +3,15 @@ bricks:
     git:
       url: https://github.com/nopyjf/nopyjf-code-brick.git
       path: screen
+  elevated-button:
+    git:
+      url: https://github.com/nopyjf/nopyjf-code-brick.git
+      path: elevated-button
+  text-button:
+    git:
+      url: https://github.com/nopyjf/nopyjf-code-brick.git
+      path: text-button
+  floating-button:
+    git:
+      url: https://github.com/nopyjf/nopyjf-code-brick.git
+      path: floating-button
